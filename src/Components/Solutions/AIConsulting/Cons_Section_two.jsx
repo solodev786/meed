@@ -11,13 +11,13 @@ function Cons_Section_two() {
     <div className=" w-full  py-10">
       <div className=" flex flex-col gap-10 w-full">
         <div className="px-5 md:px-20 flex flex-col gap-10 md:w-4/5">
-          <h1 className=" text-xl font-light">
+          <h1 className=" md:text-xl font-light">
             At meedAI we are on the ground level and as such understand the boom
             which is AI. Within every industry, the adoption of AI technology
             has skyrocketed and will continue do so, so it is improtant your
             company is able to keep up.
           </h1>
-          <h1 className=" text-xl font-light">
+          <h1 className=" md:text-xl font-light">
             For this reason, we offer an AI Consulting service which allows you
             to connect with experts within our network and hire them for a day,
             a week, a month or longer and let them come into your organisation
@@ -80,7 +80,7 @@ function Cons_Section_two() {
           </div>
         </div>
         <div className=" flex flex-col gap-5">
-          <div className=" py-10 w-full justify-center items-start md:items-center flex gap-3">
+          <div className=" py-10 w-full justify-center items-start md:items-center flex gap-3 px-5 md:px-0">
             <h1 className=" text-2xl">
               <PiStarFourFill />
             </h1>

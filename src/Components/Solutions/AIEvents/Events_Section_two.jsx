@@ -10,16 +10,16 @@ function Events_Section_two() {
     <div className=" w-full  py-10">
       <div className=" flex flex-col gap-10 w-full">
         <div className=" px-5 md:px-20 flex flex-col gap-10 md:w-4/5">
-          <h1 className=" text-xl font-light">
+          <h1 className=" md:text-xl font-light">
             Are you sick and tired of hearing the same old boring speakers who
             lack any real experience in the field? Do you want to actually add
             value to the people attending your event?
           </h1>
-          <h1 className=" text-xl font-light">
+          <h1 className=" md:text-xl font-light">
             Well here at meedAI we specialize in the People Side of AI so we’ve
             got you covered. 
           </h1>
-          <h1 className=" text-xl font-light">
+          <h1 className=" md:text-xl font-light">
             Our extensive network of AI talent means we’ve got the best guests
             for your upcoming event who are real experts in the industry. So,
             whether you need panelists, speakers or just some big names to
@@ -83,7 +83,7 @@ function Events_Section_two() {
           </div>
         </div>
         <div className=" flex flex-col gap-5">
-          <div className=" py-10 w-full justify-center items-start md:items-center flex gap-3">
+          <div className=" py-10 w-full justify-center items-start md:items-center flex gap-3 px-5 md:px-0">
             <h1 className=" text-2xl">
               <PiStarFourFill />
             </h1>

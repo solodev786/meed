@@ -10,13 +10,13 @@ function Talent_Section_two() {
     <div className=" w-full  py-10">
       <div className=" flex flex-col gap-10 w-full">
         <div className=" px-5 md:px-20 flex flex-col gap-10 md:w-4/5">
-          <h1 className=" text-xl font-light">
+          <h1 className="  md:text-xl font-light">
             People often say that one week in AI is like a month in any other
             industry, and that is so true. With a market like this, where there
             are changes practically every day, startups like yourself need to be
             able to act swiftly and bring on new talent at a moments notice. 
           </h1>
-          <h1 className=" text-xl font-light">
+          <h1 className=" md:text-xl font-light">
             We also understand that many growing startups do not have the
             capital to invest in full-time hires straight away, as oftentimes
             experienced individuals can cost you anywhere from $200,000 and
@@ -24,7 +24,7 @@ function Talent_Section_two() {
             into people who may not end up working for the busines long-term or
             who may not begood cultural fits.
           </h1>
-          <h1 className=" text-xl font-light">
+          <h1 className=" md:text-xl font-light">
             That is why we have developed a contract recruitment service which
             has been meticulously designed to put your best interests at heart
             to ensure we can offer as much value as possible. 
@@ -96,8 +96,8 @@ function Talent_Section_two() {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col gap-5">
-          <div className=" py-10 w-full justify-center items-start md:items-center flex gap-3">
+        <div className=" flex flex-col gap-5 ">
+          <div className=" py-10 w-full justify-center items-start md:items-center flex gap-3 px-5 md:px-0">
             <h1 className=" md:text-2xl">
               <PiStarFourFill />
             </h1>

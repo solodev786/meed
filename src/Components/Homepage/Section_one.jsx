@@ -74,8 +74,8 @@ function Section_one() {
           </div>
         </div>
         <div className=" flex flex-col gap-2 items-center justify-center md:justify-center h-full">
-          <h1 className={` text-8xl md:text-[180px] font-bold`}>meedAI</h1>
-          <h1 className=" text-2xl tracking-wider md:-mt-5">
+          <h1 className={` text-7xl md:text-[180px] font-bold`}>meedAI</h1>
+          <h1 className=" text-xl tracking-wider md:-mt-5">
             The people side of AI
           </h1>
         </div>
