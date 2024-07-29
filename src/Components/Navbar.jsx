@@ -1,71 +1,11 @@
-// "use client";
-// import React, { useState } from "react";
-// import { Menu, MenuItem } from "@mui/material";
-// import Link from "next/link";
-
-// function Navbar() {
-//   const [anchorEl, setAnchorEl] = useState(null);
-
-//   const handleClick = (event) => {
-//     setAnchorEl(event.currentTarget);
-//   };
-
-//   const handleClose = () => {
-//     setAnchorEl(null);
-//   };
-
-//   return (
-//     <div className="w-full h-32 px-10 flex justify-between items-center">
-//       <h1 className="text-3xl font-semibold">meedAI</h1>
-//       <div className="flex items-center gap-5 text-white font-extralight">
-//         <div className="bg-black rounded-full px-10 py-3 flex items-center gap-5">
-//           <Link href={"/"}>
-//             <h1 className="">Home</h1>
-//           </Link>
-
-//           <div className="relative">
-//             <h1 className="cursor-pointer" onClick={handleClick}>
-//               Solutions
-//             </h1>
-//             <Menu
-//               anchorEl={anchorEl}
-//               open={Boolean(anchorEl)}
-//               onClose={handleClose}
-//             >
-//               <MenuItem onClick={handleClose}>
-//                 <Link href={"/AITalent"}>AI Talent</Link>
-//               </MenuItem>
-//               <MenuItem onClick={handleClose}>
-//                 <Link href={"/AIConsulting"}>AI Consulting</Link>
-//               </MenuItem>
-//               <MenuItem onClick={handleClose}>
-//                 <Link href={"/AIEvents"}>AI Events</Link>
-//               </MenuItem>
-//             </Menu>
-//           </div>
-
-//           <Link href={"/about"}>
-//             <h1 className="">Our story</h1>
-//           </Link>
-//           <Link href={"/contact"}>
-//             <h1 className="">Contact</h1>
-//           </Link>
-//         </div>
-//         <div className="px-10 py-3 bg-black rounded-full">
-//           <h1>Get in Touch</h1>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Navbar;
 "use client";
 import React, { useState } from "react";
 import { Menu, MenuItem } from "@mui/material";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import logo from "../assets/logoblack.png";
+import Image from "next/image";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -85,7 +25,8 @@ function Navbar() {
 
   return (
     <div className="w-full h-32 px-10 flex justify-between items-center">
-      <h1 className="text-3xl font-semibold">meedAI</h1>
+      {/* <h1 className="text-3xl font-semibold">meedAI</h1> */}
+      <Image src={logo} width={200} className=" -ml-20 mt-5" />
       <div className="hidden md:flex items-center gap-5 text-white font-extralight">
         <div className="bg-black rounded-full px-10 py-3 flex items-center gap-5">
           <Link href={"/"}>
@@ -142,7 +83,7 @@ function Navbar() {
           <Link href={"/AITalent"}>AI Talent</Link>
           <Link href={"/AIConsulting"}>AI Consulting</Link>
           <Link href={"/AIEvents"}>AI Events</Link>
-         
+
           <Link href={"/about"} onClick={toggleMobileMenu}>
             <h1>Our story</h1>
           </Link>

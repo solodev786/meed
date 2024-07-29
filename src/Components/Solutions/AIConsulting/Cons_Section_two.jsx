@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { GiFlexibleStar } from "react-icons/gi";
 import { MdOutlineAccountBalance } from "react-icons/md";
@@ -7,6 +8,53 @@ import { SiFigshare } from "react-icons/si";
 import { GrAccessibility } from "react-icons/gr";
 
 function Cons_Section_two() {
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   mobile: "",
+  //   message: "",
+  //   to_name: "IBPD", // You can set a default value or change dynamically
+  //   from_name: "", // Set it as the user's name or leave it empty
+  // });
+
+  // formData.from_email = formData.email;
+
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //     from_name: formData.name, // Set from_name to the user's name
+  //   });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   // Send email using EmailJS
+  //   emailjs
+  //     .send(
+  //       "service_712adrr",
+  //       "template_oq7ufdp",
+  //       formData,
+  //       "DRXsVO40bZnQi0X2E"
+  //     )
+  //     .then(
+  //       (response) => {
+  //         console.log("Email sent successfully:", response);
+  //         setFormData({
+  //           name: "",
+  //           email: "",
+  //           mobile: "",
+  //           message: "",
+  //         });
+  //         // Handle success
+  //       },
+  //       (error) => {
+  //         console.error("Email sending failed:", error);
+  //         // Handle error
+  //       }
+  //     );
+  // };
   return (
     <div className=" w-full  py-10">
       <div className=" flex flex-col gap-10 w-full">

@@ -4,6 +4,8 @@ import { Titillium_Web, Lilita_One, Paytone_One } from "next/font/google";
 import { Menu, MenuItem } from "@mui/material";
 import Link from "next/link";
 import Navbar from "../Navbar";
+import logo from "../../assets/logoblack.png";
+import Image from "next/image";
 const tit = { subsets: ["latin"], weight: "400" };
 function Section_one() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -30,7 +32,9 @@ function Section_one() {
         </div>
         <div className=" hidden md:block">
           <div className=" w-full h-32 px-10 flex justify-between items-center">
-            <h1 className=" text-3xl font-semibold">meedAI</h1>
+            {/* <h1 className=" text-3xl font-semibold">meedAI</h1> */}
+            <Image src={logo} width={200} className=" -ml-20 mt-5" />
+
             <div className=" flex items-center gap-5 text-white font-extralight">
               <div className=" bg-black rounded-full px-10 py-3 flex items-center gap-5 ">
                 <Link href={"/"}>
