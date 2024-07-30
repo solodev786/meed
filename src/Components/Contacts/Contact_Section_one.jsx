@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import bg from "../../assets/contact.jpg";
@@ -13,15 +14,21 @@ function Contact_Section_one() {
             business
           </h1>
           <h1 className=" font-light text-center md:text-left">
-            Get help 24/7, with oour award winning support network of payments
-            experts
+            Get in touch to unlock the People side of AI
           </h1>
           <div className=" flex items-center gap-5 mt-5">
-            <div className=" rounded-full w-40 flex items-center justify-center gap-2 h-12 border-2 border-black">
+            {/* <div className=" rounded-full w-40 flex items-center justify-center gap-2 h-12 border-2 border-black">
               <FaVideo />
               <h1>Book a call</h1>
-            </div>
-            <div className=" rounded-full w-40 flex items-center justify-center gap-2 h-12 bg-black text-white">
+            </div> */}
+            <div
+              onClick={() =>
+                document
+                  .getElementById("contact-details")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className=" rounded-full w-40 flex items-center justify-center gap-2 h-12 bg-black text-white"
+            >
               <h1>Get in touch</h1>
             </div>
           </div>

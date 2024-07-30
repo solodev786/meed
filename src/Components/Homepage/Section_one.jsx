@@ -20,7 +20,7 @@ function Section_one() {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-between relative">
       <video
-        src="/vid.mp4"
+        src="/vid.MP4"
         className=" w-full h-full object-cover"
         muted
         loop
@@ -33,13 +33,15 @@ function Section_one() {
         <div className=" hidden md:block">
           <div className=" w-full h-32 px-10 flex justify-between items-center">
             {/* <h1 className=" text-3xl font-semibold">meedAI</h1> */}
-            <Image src={logo} width={200} className=" -ml-20 mt-5" />
+            <Link href={"/"}>
+              <Image src={logo} width={300} className=" -ml-20 mt-6 " />
+            </Link>
 
             <div className=" flex items-center gap-5 text-white font-extralight">
               <div className=" bg-black rounded-full px-10 py-3 flex items-center gap-5 ">
-                <Link href={"/"}>
+                {/* <Link href={"/"}>
                   <h1 className="">Home</h1>
-                </Link>
+                </Link> */}
 
                 <div className="relative">
                   <h1 className="cursor-pointer" onClick={handleClick}>
@@ -69,11 +71,11 @@ function Section_one() {
                   <h1 className="">Contact</h1>
                 </Link>
               </div>
-              <Link href={"/contact"}>
+              {/* <Link href={"/contact"}>
                 <div className=" px-10 py-3 bg-black rounded-full">
                   <h1>Get in touch</h1>
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

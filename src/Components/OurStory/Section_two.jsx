@@ -7,7 +7,7 @@ function Section_two() {
       <div className=" md:w-[1300px] flex justify-center px-5 md:px-20">
         <div className=" flex flex-col gap-10">
           <div className=" md:flex w-full items-start justify-between ">
-            <h1 className=" text-4xl w-1/4 mb-5 md:mb-0">About</h1>
+            <h1 className=" text-4xl w-1/4 mb-5 md:mb-0">Our story</h1>
             <h2 className=" text-xl font-light md:w-3/4 ">
               The approach taken by most talent firms in the industry is to get
               as much commission out of recently funded startups as possible,
@@ -41,22 +41,18 @@ function Section_two() {
                 <PiStarFourFill />
               </h1>
               <h1 className=" text-2xl md:text-4xl font-semibold">
-                So welcome to MeedAI, your trusted partner{" "}
+                So welcome to meedAI, your trusted partner{" "}
               </h1>
               <h1 className=" hidden md:block text-sm md:text-2xl">
                 <PiStarFourFill />
               </h1>
             </div>
             <div className=" flex items-start md:items-center gap-3">
-              <h1 className=" text-sm md:text-2xl">
-                <PiStarFourFill />
-              </h1>
+              <h1 className=" text-sm md:text-2xl"></h1>
               <h1 className=" text-2xl md:text-4xl font-semibold">
                 for the people side of AI.
               </h1>
-              <h1 className="hidden md:block text-2xl">
-                <PiStarFourFill />
-              </h1>
+              <h1 className="hidden md:block text-2xl"></h1>
             </div>
           </div>
         </div>

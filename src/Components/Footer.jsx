@@ -1,4 +1,5 @@
 import Link from "next/link";
+import logo from "../assets/logo.png";
 import React from "react";
 import {
   FaFacebook,
@@ -10,6 +11,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import Image from "next/image";
 function Footer() {
   return (
     <div className=" ">
@@ -17,8 +19,9 @@ function Footer() {
         <div className=" md:w-[1300px] h-full md:flex items-start justify-around">
           <div className=" flex flex-col h-full px-5 md:px-0 justify-between ">
             <div className=" flex flex-col gap-2 ">
-              <h1 className=" text-5xl font-semibold">meedAI</h1>
-              <h1 className=" text-1/2 font-light">
+              {/* <h1 className=" text-5xl font-semibold">meedAI</h1> */}
+              <Image src={logo} width={200} className=" -mt-20 -ml-16" />
+              <h1 className=" text-1/2 font-light -mt-10">
                 Connecting AI startups with top talent and providing expert AI
                 consultancy to drive innovation and success.
               </h1>
@@ -31,15 +34,11 @@ function Footer() {
                   <FaLinkedin />
                 </h1>
               </Link>
-              <h1>
-                <FaFacebook />
-              </h1>
-              <h1>
-                <FaInstagram />
-              </h1>
-              <h1>
-                <FaTwitter />
-              </h1>
+              <Link href={"https://x.com/ai_meed?t=rZdf2tCgZEA-rgem8CZY2g&s=09"}>
+                <h1>
+                  <FaTwitter />
+                </h1>
+              </Link>
             </div>
           </div>
           <div className=" w-4/5 md:flex justify-center items-start gap-16 px-5 md:py-0">
@@ -63,7 +62,7 @@ function Footer() {
                   <h1>Services</h1>
                   <div className=" flex flex-col gap-2 font-extralight text-sm">
                     <Link href={"/AITalent"}>
-                      <h1>AI Talents</h1>
+                      <h1>AI Talent</h1>
                     </Link>
                     <Link href={"/AIConsulting"}>
                       <h1>AI Consulting</h1>
@@ -96,7 +95,7 @@ function Footer() {
                 <h1>Services</h1>
                 <div className=" flex flex-col gap-2 font-extralight text-sm">
                   <Link href={"/AITalent"}>
-                    <h1>AI Talents</h1>
+                    <h1>AI Talent</h1>
                   </Link>
                   <Link href={"/AIConsulting"}>
                     <h1>AI Consulting</h1>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { PiStarFourFill } from "react-icons/pi";
 function Section_two() {
@@ -14,13 +15,15 @@ function Section_two() {
       </div>
       <div>
         <h1 className=" w-full md:w-3/4 text-lg md:text-xl font-extralight md:font-light">
-          At meedAI, we redefine AI talent and consultancy. Our goal is to
+          At meedAI, we've redefined AI talent and consultancy. Our goal is to
           connect innovative startups with top-tier professionals and experts,
           offering unparalleled transparency and efficiency. Since our
           inception, we’ve aimed to break away from conventional practices,
           focusing on what truly matters: your success and satisfaction.
           Discover how our approach to AI can drive your growth.
-          <span className=" font-semibold underline">Learn more</span>
+          <Link href={"/about"}>
+            <span className=" font-semibold underline">Learn more</span>
+          </Link>
         </h1>
       </div>
     </div>

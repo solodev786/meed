@@ -26,12 +26,14 @@ function Navbar() {
   return (
     <div className="w-full h-32 px-10 flex justify-between items-center">
       {/* <h1 className="text-3xl font-semibold">meedAI</h1> */}
-      <Image src={logo} width={200} className=" -ml-20 mt-5" />
+      <Link href={"/"}>
+        <Image src={logo} width={300} className=" -ml-20 mt-6 " />
+      </Link>
       <div className="hidden md:flex items-center gap-5 text-white font-extralight">
         <div className="bg-black rounded-full px-10 py-3 flex items-center gap-5">
-          <Link href={"/"}>
+          {/* <Link href={"/"}>
             <h1 className="">Home</h1>
-          </Link>
+          </Link> */}
 
           <div className="relative">
             <h1 className="cursor-pointer" onClick={handleClick}>
@@ -58,12 +60,14 @@ function Navbar() {
             <h1 className="">Our story</h1>
           </Link>
           <Link href={"/contact"}>
-            <h1 className="">Contact</h1>
+            <h1 className="">Get in Touch</h1>
           </Link>
         </div>
-        <div className="px-10 py-3 bg-black rounded-full">
-          <h1>Get in Touch</h1>
-        </div>
+        {/* <Link href={"/contact"}>
+          <div className="px-10 py-3 bg-black rounded-full">
+            <h1>Get in Touch</h1>
+          </div>
+        </Link> */}
       </div>
       <div className="md:hidden">
         <MenuIcon onClick={toggleMobileMenu} className="cursor-pointer" />
@@ -90,9 +94,9 @@ function Navbar() {
           <Link href={"/contact"} onClick={toggleMobileMenu}>
             <h1>Contact</h1>
           </Link>
-          <div className="px-10 py-3 bg-white text-black rounded-full mt-5">
+          {/* <div className="px-10 py-3 bg-white text-black rounded-full mt-5">
             <h1>Get in Touch</h1>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

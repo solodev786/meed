@@ -1,93 +1,143 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { FaLinkedin, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaXTwitter, FaMapLocationDot } from "react-icons/fa6";
+import emailjs from "emailjs-com";
 import { Menu, MenuItem, TextField } from "@mui/material";
+import Link from "next/link";
 
 function Contact_Section_two() {
+  const [formData, setFormData] = useState({
+    first: "",
+    last: "",
+    email: "",
+    service: "",
+    chat: "",
+    message: "",
+    to_name: "meedAI",
+    from_name: "",
+  });
+
+  formData.email = formData.email;
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+      from_name: formData.first,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+
+    emailjs
+      .send(
+        "service_i33dj6i",
+        "template_x4krcov",
+        formData,
+        "bAMZbyLKZXuGNR0C6"
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          setFormData({
+            first: "",
+            last: "",
+            email: "",
+            service: "",
+            chat: "",
+            message: "",
+          });
+          if (window.confirm("Would you like to book a call?")) {
+            window.location.href = "https://calendly.com/meedai/30min";
+          }
+        },
+        (error) => {
+          console.error("Email sending failed:", error);
+        }
+      );
+  };
+
   return (
     <div className=" w-full md:flex justify-center">
-      <div className=" md:w-[1300px] py-20 md:flex justify-between">
-        <div className=" flex flex-col gap-14 mb-10 md:mb-0 px-5 md:px-0">
-          <div className=" flex flex-col gap-2">
-            <h1 className=" text-3xl">Call us</h1>
-            <h1 className=" text-sm text-gray-400">
-              Call out team Mon-Fri 8am to 5pm
-            </h1>
-            <div className=" flex items-center gap-2">
-              <FaPhoneAlt className=" text-2xl" />
-              <h1>(+1) 75102 9231</h1>
-            </div>
-          </div>
-
-          <div className=" flex flex-col gap-2">
-            <h1 className=" text-3xl">Chat with us</h1>
-            <h1 className=" text-sm text-gray-400">
-              Speak to our friendly team via live chat
-            </h1>
-            <div className=" flex items-center gap-2">
-              <IoMdMail className=" text-2xl" />
-              <h1>Shoot us on email</h1>
-            </div>
-            <div className=" flex items-center gap-2">
-              <FaXTwitter className=" text-2xl" />
-              <h1>Message on Twitter</h1>
-            </div>
-            <div className=" flex items-center gap-2">
-              <FaLinkedin className=" text-2xl" />
-              <h1>Message on Linkedin</h1>
-            </div>
-          </div>
-
-          <hr className=" block md:hidden" />
-        </div>
+      <div className=" md:w-[1300px] py-20 md:flex justify-center">
         <div className=" flex flex-col gap-5 px-5 md:px-0 md:w-1/2">
-          <div className=" hidden md:block">
-            <div className="  md:flex md:gap-5 items-center">
-              <TextField label="First name" fullWidth />
-              <TextField label="Last name" fullWidth />
+          <div
+            id="contact-details"
+            className="flex flex-col gap-5 items-center"
+          >
+            <div className=" hidden md:block w-full">
+              <div className="md:flex md:gap-5 items-center">
+                <TextField
+                  value={formData.first}
+                  onChange={handleChange}
+                  label="First name"
+                  fullWidth
+                  name="first"
+                />
+                <TextField
+                  label="Last name"
+                  value={formData.last}
+                  onChange={handleChange}
+                  fullWidth
+                  name="last"
+                />
+              </div>
             </div>
-          </div>
-          <div className=" block md:hidden">
-            <div className="  flex flex-col gap-5">
-              <TextField label="First name" fullWidth />
-              <TextField label="Last name" fullWidth />
+            <div className=" block md:hidden w-full">
+              <div className="flex flex-col gap-5">
+                <TextField
+                  value={formData.first}
+                  onChange={handleChange}
+                  label="First name"
+                  fullWidth
+                  name="first"
+                />
+                <TextField
+                  value={formData.last}
+                  onChange={handleChange}
+                  label="Last name"
+                  fullWidth
+                  name="last"
+                />
+              </div>
             </div>
-          </div>
-          <TextField label="Email address" fullWidth />
-          <TextField select label="Choose service">
-            <MenuItem>AI talent</MenuItem>
-            <MenuItem>AI talent</MenuItem>
-            <MenuItem>AI talent</MenuItem>
-          </TextField>
+            <TextField
+              onChange={handleChange}
+              value={formData.email}
+              name="email"
+              label="Email address"
+              fullWidth
+            />
+            <TextField
+              fullWidth
+              select
+              label="Choose service"
+              onChange={handleChange}
+              value={formData.service}
+              name="service"
+            >
+              <MenuItem value="AI Talent">AI Talent</MenuItem>
+              <MenuItem value="AI Consulting">AI Consulting</MenuItem>
+              <MenuItem value="AI Events">AI Events</MenuItem>
+            </TextField>
 
-          <div className=" hidden md:block">
-            <div className=" flex gap-5 items-center">
-              <div className=" flex flex-col w-full">
-                <h1 className=" text-sm">Book a 30 min chat</h1>
-                <TextField placeholder="Book" fullWidth type="datetime-local" />
-              </div>
-              <div className=" flex flex-col w-full">
-                <h1 className=" text-sm">Book a 30 min call</h1>
-                <TextField placeholder="Book" fullWidth type="datetime-local" />
-              </div>
-            </div>
-          </div>
-          <div className=" block md:hidden">
-            <div className=" flex flex-col gap-5 items-center">
-              <div className=" flex flex-col w-full">
-                <h1 className=" text-sm">Book a 30 min chat</h1>
-                <TextField placeholder="Book" fullWidth type="datetime-local" />
-              </div>
-              <div className=" flex flex-col w-full">
-                <h1 className=" text-sm">Book a 30 min call</h1>
-                <TextField placeholder="Book" fullWidth type="datetime-local" />
-              </div>
-            </div>
-          </div>
-          <TextField label="Leave us a message" />
-          <div className="bg-black text-white w-full h-14 flex items-center justify-center rounded-md">
-            <h1>Submit</h1>
+            <TextField
+              value={formData.message}
+              onChange={handleChange}
+              name="message"
+              label="Leave us a message"
+              fullWidth
+            />
+            <button
+              onClick={handleSubmit}
+              className="bg-black text-white w-full h-14 flex items-center justify-center rounded-md"
+            >
+              <h1>Submit</h1>
+            </button>
           </div>
         </div>
       </div>

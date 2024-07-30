@@ -31,7 +31,7 @@ function Events_Section_two() {
         <div className=" w-full md:flex items-center text-white">
           <div className=" md:w-1/4 h-72 bg-black  py-10 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-5xl -mt-2" />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0" />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">1</h1>
                 <h1 className=" text-2xl font-semibold">Briefing</h1>
@@ -44,7 +44,7 @@ function Events_Section_two() {
           </div>
           <div className=" md:w-1/4 h-72 bg-[#222222]  py-10 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-5xl -mt-2" />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0" />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">2</h1>
                 <h1 className=" text-2xl font-semibold">Connections</h1>
@@ -57,21 +57,21 @@ function Events_Section_two() {
           </div>
           <div className=" md:w-1/4 h-72 bg-[#333333]  py-10 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-5xl -mt-2" />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0" />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">3</h1>
                 <h1 className=" text-2xl font-semibold">Introductions</h1>
                 <h1 className=" w-4/5 font-extralight">
                   After receiving the green light from you, we will set up
                   introductions between you all so you can gt acquainted and
-                  make sure
+                  ensure a good fit
                 </h1>
               </div>
             </div>
           </div>
           <div className=" md:w-1/4 h-72 bg-[#444444]  py-10 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-xl " />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0 " />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">4</h1>
                 <h1 className=" text-2xl font-semibold">Achievement</h1>
@@ -88,14 +88,14 @@ function Events_Section_two() {
               <PiStarFourFill />
             </h1>
             <h1 className=" text-4xl font-semibold">
-              Benifits Over Traditional Model
+              Benefits Over Traditional Model
             </h1>
             <h1 className="hidden md:block text-2xl">
               <PiStarFourFill />
             </h1>
           </div>
           <div className=" px-5 md:px-20 md:flex w-full justify-center items-center gap-10">
-            <div className="mb-5 md:mb-0 md:w-96 h-80 bg-gray-200 flex items-center px-10 py-5">
+            <div className="mb-5 md:mb-0 md:w-96 h-80 bg-gray-200 flex items-start px-10 py-10">
               <div className=" flex flex-col gap-5">
                 <SiFigshare className=" text-5xl" />
                 <h1 className=" text-3xl font-semibold">Networking</h1>
@@ -105,7 +105,7 @@ function Events_Section_two() {
                 </h1>
               </div>
             </div>
-            <div className="mb-5 md:mb-0 md:w-96 h-80 bg-gray-200 items-center px-10 py-10">
+            <div className="mb-5 md:mb-0 md:w-96 h-80 bg-gray-200 items-start px-10 py-10">
               <div className=" flex flex-col gap-5">
                 <GiFlexibleStar className=" text-5xl" />
                 <h1 className=" text-3xl font-semibold">Influencers</h1>
@@ -115,12 +115,12 @@ function Events_Section_two() {
                 </h1>
               </div>
             </div>
-            <div className="mb-5 md:mb-0 md:w-96 h-80 bg-gray-200 items-center px-10 py-10 ">
+            <div className="mb-5 md:mb-0 md:w-96 h-80 bg-gray-200 items-start px-10 py-10 ">
               <div className=" flex flex-col gap-5">
                 <MdOutlineAccountBalance className=" text-5xl" />
                 <h1 className=" text-3xl font-semibold">Rapid</h1>
                 <h1 className=" font-light">
-                  Utilize our speed and efficinecy to find the guests you need
+                  Utilize our speed and efficiency to find the guests you need
                   in as little as 72 hours
                 </h1>
               </div>

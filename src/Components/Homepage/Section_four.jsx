@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import lady from "../../assets/thalla.png";
 import bg from "../../assets/Footer.png";
+import Link from "next/link";
 function Section_four() {
   return (
     <div className=" w-full flex items-center justify-center pb-20">
@@ -15,9 +16,11 @@ function Section_four() {
               your needs and help you achieve your goals. Reach out today, and
               let’s start the conversation.
             </h1>
-            <div className=" w-32 h-12 bg-white rounded-full flex items-center justify-center">
-              <h1 className=" text-black">Contact us</h1>
-            </div>
+            <Link href={"/contact"}>
+              <div className=" w-32 h-12 bg-white rounded-full flex items-center justify-center">
+                <h1 className=" text-black">Contact us</h1>
+              </div>
+            </Link>
           </div>
           <div className=" hidden md:block w-1/2">
             <div className=" flex h-full items-end w-full">

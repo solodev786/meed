@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { GiFlexibleStar } from "react-icons/gi";
@@ -67,17 +67,17 @@ function Cons_Section_two() {
           </h1>
           <h1 className=" md:text-xl font-light">
             For this reason, we offer an AI Consulting service which allows you
-            to connect with experts within our network and hire them for a day,
-            a week, a month or longer and let them come into your organisation
-            as an advisor on all things AI.
+            to connect with experts within our network and hire them for as
+            little or as long as you need and let them come into your
+            organisation as an advisor on all things AI.
           </h1>
 
-          <h1 className=" text-3xl font-medium">How its works</h1>
+          <h1 className=" text-3xl font-medium">How it works</h1>
         </div>
         <div className=" w-full md:flex items-center text-white">
           <div className="  md:w-1/4 h-72 bg-black  py-10 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-5xl -mt-2" />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0" />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">1</h1>
                 <h1 className=" text-2xl font-semibold">Discovery</h1>
@@ -90,7 +90,7 @@ function Cons_Section_two() {
           </div>
           <div className="  md:w-1/4 h-72 bg-[#222222]  py-10 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-5xl -mt-2" />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0" />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">2</h1>
                 <h1 className=" text-2xl font-semibold">Matchmaking</h1>
@@ -103,7 +103,7 @@ function Cons_Section_two() {
           </div>
           <div className="  md:w-1/4 h-72 bg-[#333333]  py-10 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-5xl -mt-2" />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0" />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">3</h1>
                 <h1 className=" text-2xl font-semibold">Screening</h1>
@@ -116,7 +116,7 @@ function Cons_Section_two() {
           </div>
           <div className="  md:w-1/4 h-72 bg-[#444444]  py-12 flex items-start">
             <div className=" flex items-start gap-3">
-              <BiSolidRightArrow className=" text-2xl -mt-2" />
+              <BiSolidRightArrow className=" text-xl  flex flex-shrink-0" />
               <div className=" flex flex-col gap-4">
                 <h1 className=" text-2xl font-medium">4</h1>
                 <h1 className=" text-2xl font-semibold">Bridge</h1>
@@ -133,7 +133,7 @@ function Cons_Section_two() {
               <PiStarFourFill />
             </h1>
             <h1 className=" text-4xl font-semibold">
-              Benifits Over Traditional Model
+              Benefits Over Traditional Model
             </h1>
             <h1 className=" text-2xl hidden md:block">
               <PiStarFourFill />
