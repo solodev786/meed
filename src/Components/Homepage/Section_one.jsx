@@ -68,7 +68,7 @@ function Section_one() {
                   <h1 className="">Our story</h1>
                 </Link>
                 <Link href={"/contact"}>
-                  <h1 className="">Contact</h1>
+                  <h1 className="">Get in Touch</h1>
                 </Link>
               </div>
               {/* <Link href={"/contact"}>
