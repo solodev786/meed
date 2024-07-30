@@ -1,11 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FaLinkedin, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { FaXTwitter, FaMapLocationDot } from "react-icons/fa6";
+import {
+  MenuItem,
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Button,
+} from "@mui/material";
 import emailjs from "emailjs-com";
-import { Menu, MenuItem, TextField } from "@mui/material";
-import Link from "next/link";
 
 function Contact_Section_two() {
   const [formData, setFormData] = useState({
@@ -19,7 +24,7 @@ function Contact_Section_two() {
     from_name: "",
   });
 
-  formData.email = formData.email;
+  const [open, setOpen] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -51,9 +56,7 @@ function Contact_Section_two() {
             chat: "",
             message: "",
           });
-          if (window.confirm("Would you like to book a call?")) {
-            window.location.href = "https://calendly.com/meedai/30min";
-          }
+          setOpen(true); // Open the dialog after successful email sending
         },
         (error) => {
           console.error("Email sending failed:", error);
@@ -61,15 +64,22 @@ function Contact_Section_two() {
       );
   };
 
+  const handleClose = (redirect) => {
+    setOpen(false);
+    if (redirect) {
+      window.location.href = "https://calendly.com/meedai/30min";
+    }
+  };
+
   return (
-    <div className=" w-full md:flex justify-center">
-      <div className=" md:w-[1300px] py-20 md:flex justify-center">
-        <div className=" flex flex-col gap-5 px-5 md:px-0 md:w-1/2">
+    <div className="w-full md:flex justify-center">
+      <div className="md:w-[1300px] py-20 md:flex justify-center">
+        <div className="flex flex-col gap-5 px-5 md:px-0 md:w-1/2">
           <div
             id="contact-details"
             className="flex flex-col gap-5 items-center"
           >
-            <div className=" hidden md:block w-full">
+            <div className="hidden md:block w-full">
               <div className="md:flex md:gap-5 items-center">
                 <TextField
                   value={formData.first}
@@ -87,7 +97,7 @@ function Contact_Section_two() {
                 />
               </div>
             </div>
-            <div className=" block md:hidden w-full">
+            <div className="block md:hidden w-full">
               <div className="flex flex-col gap-5">
                 <TextField
                   value={formData.first}
@@ -141,6 +151,21 @@ function Contact_Section_two() {
           </div>
         </div>
       </div>
+
+      <Dialog open={open} onClose={() => handleClose(false)}>
+        <DialogTitle>Book a Call</DialogTitle>
+        <DialogContent>
+          <DialogContentText>Would you like to book a call?</DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => handleClose(false)} color="primary">
+            No
+          </Button>
+          <Button onClick={() => handleClose(true)} color="primary" autoFocus>
+            Yes
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
