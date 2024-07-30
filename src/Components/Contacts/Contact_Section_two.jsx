@@ -17,8 +17,8 @@ function Contact_Section_two() {
     first: "",
     last: "",
     email: "",
+    phone: "",
     service: "",
-    chat: "",
     message: "",
     to_name: "meedAI",
     from_name: "",
@@ -35,33 +35,45 @@ function Contact_Section_two() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+    if (
+      formData.first === "" ||
+      formData.last === "" ||
+      formData.email === "" ||
+      formData.service === "" ||
+      formData.message === "" ||
+      formData.phone === ""
+    ) {
+      alert("please fill the required Feild");
+      return;
+    } else {
+      e.preventDefault();
+      console.log(formData);
 
-    emailjs
-      .send(
-        "service_i33dj6i",
-        "template_x4krcov",
-        formData,
-        "bAMZbyLKZXuGNR0C6"
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully:", response);
-          setFormData({
-            first: "",
-            last: "",
-            email: "",
-            service: "",
-            chat: "",
-            message: "",
-          });
-          setOpen(true); // Open the dialog after successful email sending
-        },
-        (error) => {
-          console.error("Email sending failed:", error);
-        }
-      );
+      emailjs
+        .send(
+          "service_i33dj6i",
+          "template_x4krcov",
+          formData,
+          "bAMZbyLKZXuGNR0C6"
+        )
+        .then(
+          (response) => {
+            console.log("Email sent successfully:", response);
+            setFormData({
+              first: "",
+              last: "",
+              email: "",
+              phone: "",
+              service: "",
+              message: "",
+            });
+            // setOpen(true); // Open the dialog after successful email sending
+          },
+          (error) => {
+            console.error("Email sending failed:", error);
+          }
+        );
+    }
   };
 
   const handleClose = (redirect) => {
@@ -87,6 +99,7 @@ function Contact_Section_two() {
                   label="First name"
                   fullWidth
                   name="first"
+                  required
                 />
                 <TextField
                   label="Last name"
@@ -94,12 +107,14 @@ function Contact_Section_two() {
                   onChange={handleChange}
                   fullWidth
                   name="last"
+                  required
                 />
               </div>
             </div>
             <div className="block md:hidden w-full">
               <div className="flex flex-col gap-5">
                 <TextField
+                  required
                   value={formData.first}
                   onChange={handleChange}
                   label="First name"
@@ -107,6 +122,7 @@ function Contact_Section_two() {
                   name="first"
                 />
                 <TextField
+                  required
                   value={formData.last}
                   onChange={handleChange}
                   label="Last name"
@@ -116,10 +132,19 @@ function Contact_Section_two() {
               </div>
             </div>
             <TextField
+              required
               onChange={handleChange}
               value={formData.email}
               name="email"
               label="Email address"
+              fullWidth
+            />
+            <TextField
+              required
+              onChange={handleChange}
+              value={formData.phone}
+              name="phone"
+              label="phone"
               fullWidth
             />
             <TextField
@@ -136,6 +161,7 @@ function Contact_Section_two() {
             </TextField>
 
             <TextField
+              required
               value={formData.message}
               onChange={handleChange}
               name="message"
@@ -147,6 +173,19 @@ function Contact_Section_two() {
               className="bg-black text-white w-full h-14 flex items-center justify-center rounded-md"
             >
               <h1>Submit</h1>
+            </button>
+            <div className="w-full flex gap-5 items-center ">
+              <hr className=" w-full border-black" />
+              <h1>or</h1>
+              <hr className=" w-full border-black" />
+            </div>
+            <button
+              onClick={() => {
+                setOpen(true);
+              }}
+              className="bg-blue-500 text-white w-full h-14 flex items-center justify-center rounded-md"
+            >
+              <h1>Book a Meeting</h1>
             </button>
           </div>
         </div>
