@@ -27,14 +27,14 @@ function Footer() {
               </h1>
             </div>
             <div className=" flex items-center gap-10 my-10 md:my-0">
-              <Link
-                href={"https://uk.linkedin.com/in/ahmed-el-mahmoud-a088691b7"}
-              >
+              <Link href={"https://www.linkedin.com/company/meedai/about/"}>
                 <h1>
                   <FaLinkedin />
                 </h1>
               </Link>
-              <Link href={"https://x.com/ai_meed?t=rZdf2tCgZEA-rgem8CZY2g&s=09"}>
+              <Link
+                href={"https://x.com/ai_meed?t=rZdf2tCgZEA-rgem8CZY2g&s=09"}
+              >
                 <h1>
                   <FaTwitter />
                 </h1>

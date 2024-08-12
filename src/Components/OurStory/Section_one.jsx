@@ -9,8 +9,8 @@ function Section_one() {
         <div className=" flex flex-col gap-3">
           <h1 className="text-4xl md:text-7xl font-medium">Our Story</h1>
           <h1 className=" md:w-1/2 text-lg md:text-2xl">
-            meedAI was created to solve a major issue for AI startups: the
-            self-interest of traditional recruitment and consultancy firms.
+            meedAI was created to solve a major issue for AI startups and
+            provide a one-stop-shop for everything on the People side of AI
           </h1>
         </div>
       </div>

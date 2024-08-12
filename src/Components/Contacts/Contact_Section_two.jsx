@@ -144,7 +144,7 @@ function Contact_Section_two() {
               onChange={handleChange}
               value={formData.phone}
               name="phone"
-              label="phone"
+              label="Phone"
               fullWidth
             />
             <TextField

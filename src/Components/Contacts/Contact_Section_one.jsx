@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import bg from "../../assets/contact.jpg";
@@ -10,8 +10,7 @@ function Contact_Section_one() {
       <div className=" w-full h-full absolute top-0 left-0 flex items-center px-5 md:px-10 text-black">
         <div className=" flex flex-col gap-3 w-full items-center">
           <h1 className=" md:w-1/2 text-3xl font-medium text-center">
-            We’ve got an entire team dedicated to supporting you and your
-            business
+            We are here to support you and your business
           </h1>
           <h1 className=" font-light text-center md:text-left">
             Get in touch to unlock the People side of AI
